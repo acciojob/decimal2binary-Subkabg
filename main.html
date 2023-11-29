@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decimal to Binary Converter</title>
+  <script src="script.js"></script>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <label for="decimalInput">Enter a decimal number: </label>
+  <input type="text" id="decimalInput">
+  <button onclick="convertToBinary()">Convert</button>
+  <div id="binaryResult"></div>
 
+  <script>
+    function convertToBinary() {
+      const decimalInput = document.getElementById("decimalInput").value;
+      const binaryResult = decimalToBinary(parseInt(decimalInput));
+      document.getElementById("binaryResult").innerText = `Binary: ${binaryResult}`;
+    }
+  </script>
 </body>
-
 </html>
+
